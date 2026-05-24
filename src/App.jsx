@@ -1,6 +1,6 @@
 import Navbar from './components/Navbar.jsx';
 import Hero from './components/Hero.jsx';
-import TrustBar from './components/Trustbar.jsx';
+import TrustBar from './components/TrustBar.jsx';
 import FeaturedWork from './components/FeaturedWork.jsx';
 import Services from './components/Services.jsx';
 import WhyUs from './components/WhyUs.jsx';
