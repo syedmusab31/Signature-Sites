@@ -1,5 +1,6 @@
 import { useInView } from '../hooks/useInView';
 import WorkMockup from './WorkMockups.jsx';
+import audatimeDashboard from '../assets/work/audatime-dashboard.webp';
 
 const projects = [
     {
@@ -13,6 +14,10 @@ const projects = [
             { metric: '100%', label: 'Centralized data' },
             { metric: 'Instant', label: 'Operations' }
         ],
+        image: {
+            src: audatimeDashboard,
+            alt: 'Audatime operations dashboard showing payroll, invoice and profit totals, live worker activity and system status',
+        },
         class: 'lg:col-span-7'
     },
     {
@@ -141,12 +146,26 @@ export default function FeaturedWork() {
                                 </div>
                             </div>
 
-                            {/* Project UI Mockup */}
-                            <div className="h-60 md:h-64 lg:h-72 w-full mt-4 select-none" aria-hidden="true">
-                                <div className="h-full w-full shadow-[0_20px_40px_-24px_rgba(0,0,0,0.35)] rounded-2xl transition-transform duration-700 ease-out group-hover:-translate-y-1">
-                                    <WorkMockup num={project.num} active={isInView} />
+                            {/* Project Preview: real screenshot when available, otherwise a mockup */}
+                            {project.image ? (
+                                <div className="w-full mt-4 select-none">
+                                    <img
+                                        src={project.image.src}
+                                        alt={project.image.alt}
+                                        width="2000"
+                                        height="1044"
+                                        loading="lazy"
+                                        decoding="async"
+                                        className="w-full h-auto rounded-2xl border border-zinc-200 shadow-[0_20px_40px_-24px_rgba(0,0,0,0.35)] transition-transform duration-700 ease-out group-hover:-translate-y-1"
+                                    />
                                 </div>
-                            </div>
+                            ) : (
+                                <div className="h-60 md:h-64 lg:h-72 w-full mt-4 select-none" aria-hidden="true">
+                                    <div className="h-full w-full shadow-[0_20px_40px_-24px_rgba(0,0,0,0.35)] rounded-2xl transition-transform duration-700 ease-out group-hover:-translate-y-1">
+                                        <WorkMockup num={project.num} active={isInView} />
+                                    </div>
+                                </div>
+                            )}
                         </div>
                     ))}
                 </div>
