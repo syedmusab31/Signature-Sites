@@ -1,4 +1,5 @@
 import { useInView } from '../hooks/useInView';
+import WorkMockup from './WorkMockups.jsx';
 
 const projects = [
     {
@@ -84,123 +85,6 @@ const projects = [
 export default function FeaturedWork() {
     const [ref, isInView] = useInView();
 
-    // Renders high-end, responsive typographic mockups matching Option B concept
-    const renderMockup = (num) => {
-        switch (num) {
-            case '01':
-                return (
-                    <div className="bg-zinc-950 text-[#FAFAFA] h-full w-full p-6 flex flex-col justify-between font-mono relative overflow-hidden border border-zinc-800">
-                        <div className="flex justify-between items-center text-[9px] opacity-60">
-                            <span>AUDATIME.OPS // SYS_ACTIVE</span>
-                            <span className="flex items-center gap-1.5">
-                                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                                ONLINE
-                            </span>
-                        </div>
-                        <div className="my-auto flex flex-col items-center">
-                            <span className="font-display text-stroke text-5xl font-800 tracking-tighter text-zinc-800">-60%</span>
-                            <span className="text-[9px] tracking-widest uppercase mt-2 text-zinc-500">Manual Overhead</span>
-                        </div>
-                        <div className="grid grid-cols-6 gap-1 h-6 opacity-40">
-                            {[...Array(6)].map((_, idx) => (
-                                <div key={idx} className="bg-zinc-900 border border-zinc-800 rounded flex items-center justify-center text-[7px]">{idx * 20}%</div>
-                            ))}
-                        </div>
-                    </div>
-                );
-            case '02':
-                return (
-                    <div className="bg-[#F7F4EF] text-[#2C3E2B] h-full w-full p-6 flex flex-col justify-between relative overflow-hidden border border-[#E9E4DB]">
-                        <div className="flex justify-between items-center text-[9px] font-semibold tracking-wider font-mono">
-                            <span className="text-xs font-bold font-display tracking-tight">H.AGRI</span>
-                            <span>EST. 2025</span>
-                        </div>
-                        <div className="my-auto space-y-2 text-center">
-                            <div className="h-px border-t border-dashed border-[#2C3E2B]/20 w-full"></div>
-                            <p className="font-display text-base md:text-lg italic font-semibold leading-snug">"Cultivating digital credibility."</p>
-                            <div className="h-px border-t border-dashed border-[#2C3E2B]/20 w-full"></div>
-                        </div>
-                        <div className="flex justify-between text-[8px] uppercase tracking-widest opacity-60 font-mono">
-                            <span>LIBERIA // AF</span>
-                            <span>CROP SECURITY</span>
-                        </div>
-                    </div>
-                );
-            case '03':
-                return (
-                    <div className="bg-white text-black h-full w-full p-6 flex flex-col justify-between border border-zinc-200 relative overflow-hidden font-mono">
-                        <div className="flex justify-between items-center text-[9px] border-b border-zinc-100 pb-2">
-                            <span>GOV.ZA // CORE_PORTAL</span>
-                            <span>v4.09</span>
-                        </div>
-                        <div className="my-auto flex justify-between items-center">
-                            <div>
-                                <p className="text-[8px] uppercase tracking-wider text-zinc-400 mb-1">LATENCY REDUCTION</p>
-                                <p className="font-display text-4xl font-800 tracking-tighter text-zinc-900">+40%</p>
-                            </div>
-                            <div className="space-y-1">
-                                <div className="w-16 h-1.5 bg-zinc-950"></div>
-                                <div className="w-12 h-1.5 bg-zinc-400"></div>
-                                <div className="w-14 h-1.5 bg-zinc-200"></div>
-                            </div>
-                        </div>
-                        <div className="text-[8px] text-zinc-400">STATUS: OPTIMIZED_CORE_NODE</div>
-                    </div>
-                );
-            case '04':
-                return (
-                    <div className="bg-zinc-950 text-[#E2E8F0] h-full w-full p-6 flex flex-col justify-between relative overflow-hidden border border-zinc-900">
-                        <div className="text-center opacity-10">
-                            <span className="font-display text-[3rem] leading-none font-800 tracking-widest text-zinc-800 block select-none">MAROC</span>
-                        </div>
-                        <div className="my-auto text-center z-10">
-                            <p className="text-[8px] font-mono uppercase tracking-[0.35em] text-zinc-500 mb-2">PRODUCT POSITIONING</p>
-                            <h4 className="font-display text-lg font-700 tracking-tight text-white leading-snug">Sophisticated Presentation</h4>
-                        </div>
-                        <div className="flex justify-between text-[8px] font-mono text-zinc-500">
-                            <span>© 2026</span>
-                            <span>MOROCCO // CASABLANCA</span>
-                        </div>
-                    </div>
-                );
-            case '05':
-                return (
-                    <div className="bg-zinc-900 text-[#00E5FF] h-full w-full p-6 flex flex-col justify-between font-mono relative overflow-hidden border border-zinc-800">
-                        <div className="flex justify-between items-center text-[9px] opacity-75">
-                            <span>TALENTMESH.IO</span>
-                            <span className="text-white">LAUNCH_READY</span>
-                        </div>
-                        <div className="my-auto space-y-4">
-                            <div className="flex justify-around items-center">
-                                <div className="w-9 h-9 rounded-full border border-[#00E5FF] flex items-center justify-center text-[9px] text-[#00E5FF]">UI</div>
-                                <div className="h-px bg-[#00E5FF]/30 flex-grow mx-2 border-t border-dashed"></div>
-                                <div className="w-9 h-9 rounded-full border border-white text-white flex items-center justify-center text-[9px]">SYS</div>
-                                <div className="h-px bg-[#00E5FF]/30 flex-grow mx-2 border-t border-dashed"></div>
-                                <div className="w-9 h-9 rounded-full border border-[#00E5FF] flex items-center justify-center text-[9px] text-[#00E5FF]">DB</div>
-                            </div>
-                        </div>
-                        <div className="text-[7px] text-zinc-500 text-center tracking-wider">SCALABLE NODE ENVIRONMENT</div>
-                    </div>
-                );
-            case '06':
-                return (
-                    <div className="bg-zinc-950 text-white h-full w-full p-6 flex flex-col justify-between relative overflow-hidden border border-zinc-900">
-                        <div className="flex justify-between items-center text-[9px] font-mono opacity-50">
-                            <span>SHIPDAY // BRAND_SYNC</span>
-                            <span>CH // SWISS</span>
-                        </div>
-                        <div className="my-auto text-center">
-                            <h4 className="font-display text-[1.8rem] font-800 tracking-tighter leading-none text-stroke text-zinc-800 mb-2">UNIFIED</h4>
-                            <p className="text-xs font-semibold tracking-wide font-mono text-zinc-300">Product + Web Experience</p>
-                        </div>
-                        <div className="h-1 bg-gradient-to-r from-zinc-800 via-zinc-700 to-zinc-800 w-full rounded-full"></div>
-                    </div>
-                );
-            default:
-                return null;
-        }
-    };
-
     return (
         <section id="work" ref={ref} className="py-24 md:py-32 px-6 bg-background">
             <div className="max-w-7xl mx-auto w-full">
@@ -217,7 +101,7 @@ export default function FeaturedWork() {
                     {projects.map((project, i) => (
                         <div
                             key={project.num}
-                            className={`bg-zinc-50 border border-zinc-200/80 rounded-[2rem] p-8 lg:p-10 flex flex-col justify-between overflow-hidden hover:border-zinc-400 transition-colors duration-500 ${project.class} ${isInView ? 'animate-fade-in-up' : 'opacity-0'}`}
+                            className={`group bg-zinc-50 border border-zinc-200/80 rounded-[2rem] p-8 lg:p-10 flex flex-col justify-between overflow-hidden hover:border-zinc-400 transition-colors duration-500 ${project.class} ${isInView ? 'animate-fade-in-up' : 'opacity-0'}`}
                             style={{ 
                                 animationDelay: `${(i + 1) * 100}ms`,
                                 willChange: 'transform, opacity'
@@ -257,9 +141,11 @@ export default function FeaturedWork() {
                                 </div>
                             </div>
 
-                            {/* Custom Typographic Mockup Canvas */}
-                            <div className="h-60 md:h-64 lg:h-72 w-full rounded-2xl overflow-hidden mt-4 select-none">
-                                {renderMockup(project.num)}
+                            {/* Project UI Mockup */}
+                            <div className="h-60 md:h-64 lg:h-72 w-full mt-4 select-none" aria-hidden="true">
+                                <div className="h-full w-full shadow-[0_20px_40px_-24px_rgba(0,0,0,0.35)] rounded-2xl transition-transform duration-700 ease-out group-hover:-translate-y-1">
+                                    <WorkMockup num={project.num} active={isInView} />
+                                </div>
                             </div>
                         </div>
                     ))}

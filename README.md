@@ -112,6 +112,7 @@ Signature-Sites/
 │   │   ├── Hero.jsx
 │   │   ├── TrustBar.jsx
 │   │   ├── FeaturedWork.jsx
+│   │   ├── WorkMockups.jsx  # UI mockups shown in the Featured Work cards
 │   │   ├── Services.jsx
 │   │   ├── WhyUs.jsx
 │   │   ├── Testimonials.jsx

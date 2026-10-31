@@ -1,4 +1,6 @@
 export default function Footer() {
+    const currentYear = new Date().getFullYear();
+
     return (
         <footer className="bg-background border-t border-border py-16 px-6 md:py-10">
             <div className="max-w-7xl mx-auto">
@@ -42,7 +44,7 @@ export default function Footer() {
                 </div>
                 {/* should be in center */}
                 <div className="border-t border-border pt-8">
-                    <p className="text-xs text-muted text-center">© 2025 Signature Sites. All rights reserved.</p>
+                    <p className="text-xs text-muted text-center">© {currentYear} Signature Sites. All rights reserved.</p>
                 </div>
             </div>
         </footer>
